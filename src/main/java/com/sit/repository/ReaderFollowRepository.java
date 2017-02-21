@@ -3,6 +3,8 @@ package com.sit.repository;
 import com.sit.entity.ReaderFollow;
 import org.springframework.data.repository.CrudRepository;
 
+import java.util.List;
+
 /**
  * <pre>
  * 任务：
@@ -14,4 +16,8 @@ import org.springframework.data.repository.CrudRepository;
  */
 
 public interface ReaderFollowRepository extends CrudRepository<ReaderFollow, Long> {
+    List<ReaderFollow> findByFollowedId(long followedId);
+    List<ReaderFollow> findByReaderId(long readerId);
+    int countByFollowedId(long followedId);
+    int countByReaderId(long readerId);
 }

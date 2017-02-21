@@ -37,6 +37,11 @@ public class GroupInfo {
     private Integer baseNumber;
 
     /**
+     * 小组等级
+     */
+    private Byte grade;
+
+    /**
      * 是否有效 true:是 false:否
      */
     private Boolean validFlag;
